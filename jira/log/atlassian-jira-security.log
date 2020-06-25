@@ -1,0 +1,6 @@
+2020-06-25 08:06:19,362+0000 http-nio-8080-exec-2      HttpSession created [yuqkso]
+2020-06-25 08:06:55,150+0000 localhost-startStop-2      HttpSession [yuqkso] destroyed for 'anonymous'
+2020-06-25 08:07:32,666+0000 http-nio-8080-exec-3      HttpSession created [atxaie]
+2020-06-25 08:11:49,915+0000 http-nio-8080-exec-10 anonymous 489x20x1 atxaie 172.23.0.1 /secure/SetupDatabase.jspa Jira 8.10.0 build: 810001 started. You can now access Jira through your web browser.
+2020-06-25 08:24:13,350+0000 http-nio-8080-exec-3      HttpSession created [uipxnc]
+2020-06-25 08:28:13,466+0000 JIRA-Bootstrap      Jira 8.10.0 build: 810001 started. You can now access Jira through your web browser.

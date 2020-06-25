@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+      nginx:
+        image: nginx:latest
+        container_name: nginx
+        restart: always
+        depends_on:
+          - mysql
+        volumes:
+          - ./conf/nginx/default.conf:/etc/nginx/conf.d/default.conf
+          - ./public/:/var/www/html
+        ports:
+          - 80:80
+          - 443:443
+
+      mysql:
+        image: mysql:latest
+        container_name: mysql
+        restart: always
+        environment:
+          MYSQL_DATABASE: jira
+          MYSQL_USER: jira
+          MYSQL_ROOT_PASSWORD: 7*kKQp32HmNc2yrrUWWA^j*%$i7E5fn*
+        volumes:
+          - ./DB/mysql:/var/lib/mysql
+
+      jira:
+        image: atlassian/jira-core:latest
+        container_name: jira
+        restart: always
+        depends_on:
+          - mysql
+        volumes:
+          - ./jira:/var/atlassian/application-data/jira
+        ports:
+          - 8080:8080
